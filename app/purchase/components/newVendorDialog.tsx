@@ -45,7 +45,7 @@ export function NewVendorDialog({
     if (isSubmitted && !vendorSlice.isLoading) {
       setShowDialog(false);
     }
-  }, [isSubmitted, vendorSlice.isLoading]);
+  }, [isSubmitted, setShowDialog, vendorSlice.isLoading]);
 
   return (
     <Dialog open={showDialog} onOpenChange={setShowDialog}>
