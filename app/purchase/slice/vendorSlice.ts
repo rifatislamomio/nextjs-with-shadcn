@@ -1,11 +1,18 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { getVendors, createVendor } from "../../api/vendors";
 
-const initialState = {
+type VendorSliceType = {
+  isLoading: boolean;
+  isError: boolean;
+  data: unknown[];
+  error: unknown;
+};
+
+const initialState: VendorSliceType = {
   isLoading: false,
   isError: false,
   data: [],
-  error: null
+  error: {},
 };
 
 export const fetchVendors = createAsyncThunk(
@@ -14,7 +21,7 @@ export const fetchVendors = createAsyncThunk(
     const vendors = await getVendors();
     console.log("🚀 ~ vendors:", vendors);
     return vendors;
-  }
+  },
 );
 
 export const addVendor = createAsyncThunk(
@@ -26,7 +33,7 @@ export const addVendor = createAsyncThunk(
   }) => {
     const vendor = await createVendor(data);
     return vendor;
-  }
+  },
 );
 
 const vendorsSlice = createSlice({
@@ -61,7 +68,8 @@ const vendorsSlice = createSlice({
         state.isLoading = false;
         state.error = action.error?.message;
       });
-  }
+  },
+  reducers: {},
 });
 
 export default vendorsSlice.reducer;
