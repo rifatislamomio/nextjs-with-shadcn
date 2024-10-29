@@ -1,10 +1,17 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { getVendors, createVendor } from "../../api/vendors";
 
+type Vendor= {
+  id: string;
+  name: string;
+  description: string;
+  url: string;
+}
+
 type VendorSliceType = {
   isLoading: boolean;
   isError: boolean;
-  data: unknown[];
+  data: Vendor[];
   error: unknown;
 };
 

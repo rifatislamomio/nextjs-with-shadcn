@@ -38,12 +38,12 @@ const formSchema = z
     path: ["confirmPassword"],
   });
 
-interface Vendor {
+type Vendor = {
   id: string;
   name: string;
   description: string;
   url: string;
-}
+};
 
 export default function PurchaseForm() {
   const [showDialog, setShowDialog] = useState(false);
