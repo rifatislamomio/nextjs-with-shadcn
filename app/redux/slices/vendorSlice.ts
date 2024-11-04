@@ -1,5 +1,4 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { getVendors, createVendor } from "../../api/vendors";
+import { createSlice } from "@reduxjs/toolkit";
 
 type Vendor = {
   id: string;
