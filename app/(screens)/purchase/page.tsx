@@ -23,7 +23,7 @@ import {
 import { NewVendorDialog } from "./components/newVendorDialog";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchVendors } from "./slice/vendorSlice";
+import { fetchVendors } from "../../redux/slices/vendorSlice";
 import { AppDispatch, IRootState } from "../../redux/store";
 
 const formSchema = z

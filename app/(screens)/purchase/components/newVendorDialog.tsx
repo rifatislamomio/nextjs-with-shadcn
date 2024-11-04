@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { addVendor } from "../slice/vendorSlice";
+import { addVendor } from "../../../redux/slices/vendorSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, IRootState } from "@/app/redux/store";
 
