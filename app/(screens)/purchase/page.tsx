@@ -10,21 +10,21 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "../../components/ui/form";
-import { Input } from "../../components/ui/input";
-import { Button } from "../../components/ui/button";
+} from "../../../components/ui/form";
+import { Input } from "../../../components/ui/input";
+import { Button } from "../../../components/ui/button";
 import {
   Select,
   SelectContent,
   SelectTrigger,
   SelectValue,
   SelectItem,
-} from "../../components/ui/select";
+} from "../../../components/ui/select";
 import { NewVendorDialog } from "./components/newVendorDialog";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchVendors } from "./slice/vendorSlice";
-import { AppDispatch, IRootState } from "../redux/store";
+import { AppDispatch, IRootState } from "../../redux/store";
 
 const formSchema = z
   .object({
@@ -68,7 +68,7 @@ export default function PurchaseForm() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-8 md:p-24">
+    <main className="flex flex-col items-center justify-between p-8 md:p-24">
       <NewVendorDialog showDialog={showDialog} setShowDialog={setShowDialog} />
       <Form {...form}>
         <form

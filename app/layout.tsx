@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "./(home)/components/header";
+import Header from "./(screens)/(home)/components/header";
 import { ReduxProvider } from "./redux/provider";
 
 export const metadata: Metadata = {
